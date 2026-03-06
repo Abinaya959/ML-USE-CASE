@@ -1,0 +1,21 @@
+PROGRAM:
+
+from sklearn.neighbors import KNeighborsClassifier
+X = [
+    [2, 30],
+    [3, 35],
+    [5, 60],
+    [6, 65],
+    [8, 80],
+    [1, 25]
+]
+y = ['Fail', 'Fail', 'Pass', 'Pass', 'Pass', 'Fail']
+knn = KNeighborsClassifier(n_neighbors=3)
+knn.fit(X, y)
+new_student = [[4, 50]]
+prediction = knn.predict(new_student)
+print("Predicted Result for New Student:", prediction[0])
+
+OUTPUT:
+
+Predicted Result for New Student: Pass
